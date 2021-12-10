@@ -1,0 +1,14 @@
+# 開発環境用
+
+version: '3.7'
+
+services:
+    app:
+      build: ./app # Dockerfileがあるディレクトリ
+      container_name: node16
+      tty: true # コンテナの起動を継続させる
+      ports:
+        - "81:8081"
+      restart: always
+      volumes:
+        - ./app/express:/usr/src/express
