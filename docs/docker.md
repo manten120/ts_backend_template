@@ -31,6 +31,23 @@ service:
 
 とりあえず、コンテナの起動を継続させるために `tty: true` が必要
 
+## docker-machineを作成し起動する
+
+`default`という名前の docker machine が起動済みのとき、`sub`という名前の docker machine を作成し起動したい。
+
+```
+docker-machine create --driver virtualbox sub
+```
+
+```
+docker-machine env sub
+```
+
+```
+eval $("C:\Program Files\Docker Toolbox\docker-machine.exe" env sub)
+```
+
+
 ## 起動方法
 
 ### docker-compose でコンテナをビルド・起動する
