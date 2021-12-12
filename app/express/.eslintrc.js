@@ -3,22 +3,29 @@ module.exports = {
   env: {
     es2021: true,
     node: true,
+    'jest/globals': true, // eslint-plugin-jest https://www.npmjs.com/package/eslint-plugin-jest
   },
+
   extends: [
     'airbnb-base', // eslint-config-airbnb-base JSのコーディングルール https://github.com/airbnb/javascript
     'plugin:import/recommended', // importに関するルール。pluginsに書いてもよいが'plugin:import/typescript'に合わせてここに書いた。https://github.com/import-js/eslint-plugin-import
     'plugin:import/typescript', // TypeScriptのimportのパスを解決する。pluginsに書くと他のimportのrulesが無効になってしまうのでここに書いた。https://www.npmjs.com/package/eslint-import-resolver-typescript https://github.com/import-js/eslint-plugin-import#typescript
     'prettier', // eslint-config-prettier prettierと競合するルールをオフにする。TypeScriptに関するルールも含む() https://github.com/prettier/eslint-config-prettier
   ],
+
   parser: '@typescript-eslint/parser', // TypeScriptのパーサー。@typescript-eslint/eslint-pluginを使うときに必要。https://github.com/typescript-eslint/typescript-eslint/tree/b9407c560c8ab625fd546af73f71cce8178b9e05/packages/parser
+
   parserOptions: {
     ecmaVersion: 13,
     sourceType: 'module',
   },
+
   plugins: [
     '@typescript-eslint', // @typescript-eslint/eslint-plugin TypeScriptのLintルール https://www.npmjs.com/package/@typescript-eslint/eslint-plugin
     'prefer-arrow-functions',
+    'jest', // eslint-plugin-jest https://www.npmjs.com/package/eslint-plugin-jest
   ],
+
   rules: {
     'import/no-commonjs': 'error', // require, module.exportを禁止してimport, export に統一する。https://github.com/import-js/eslint-plugin-import/blob/HEAD/docs/rules/no-commonjs.md
     'import/prefer-default-export': 'off', // 名前付きエクスポートを許可する
@@ -52,5 +59,7 @@ module.exports = {
         args: 'none', // 関数の引数は許可する
       },
     ],
+
+    '@typescript-eslint/explicit-module-boundary-types': 'off', // "exportされた関数やpublicなクラスメソッドの戻り値の型アノテーションを省略可にする https://github.com/typescript-eslint/typescript-eslint/blob/main/packages/eslint-plugin/docs/rules/explicit-module-boundary-types.md
   },
 };
