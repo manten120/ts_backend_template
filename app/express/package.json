@@ -10,16 +10,6 @@
     "prettier": "prettier",
     "lint-fix": "yarn eslint --fix ./src/**/* && yarn prettier --write ./src/**/*"
   },
-  "husky": {
-    "hooks": {
-      "pre-commit": "lint-staged"
-    }
-  },
-  "lint-staged": {
-    "./**/*.ts": [
-      "yarn lint-fix"
-    ]
-  },
   "dependencies": {
     "cookie-parser": "~1.4.4",
     "debug": "~2.6.9",
@@ -43,8 +33,6 @@
     "eslint-plugin-import": "^2.25.3",
     "eslint-plugin-jest": "^25.3.0",
     "eslint-plugin-prefer-arrow-functions": "^3.1.4",
-    "husky": "^7.0.4",
-    "lint-staged": "^12.1.2",
     "prettier": "^2.5.1",
     "typescript": "^4.5.3",
     "typesync": "^0.8.0"
