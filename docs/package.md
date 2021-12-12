@@ -23,3 +23,5 @@
 - `eslint-config-prettier` prettierと競合するESLintのルールをオフにする。TypeScriptに関するルール(@typescript-eslint/eslint-plugin)にも対応
 
 - `eslint-import-resolver-typescript` TypeScriptでimport文のパスを解決する
+
+- `eslint-plugin-jest` Jestに関するESLintルール
