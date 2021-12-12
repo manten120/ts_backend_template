@@ -4,6 +4,8 @@
 
 - `typesync` 型定義パッケージを自動でインストールする
 
+- `jest` テストを行う
+
 ## ESLint, Prettier関連のnpmパッケージ
 
 - `eslint` varをconstにしたり、関数定義をアロー関数に統一したりしてくれる
