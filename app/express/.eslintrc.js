@@ -10,7 +10,7 @@ module.exports = {
     'airbnb-base', // eslint-config-airbnb-base JSのコーディングルール https://github.com/airbnb/javascript
     'plugin:import/recommended', // importに関するルール。pluginsに書いてもよいが'plugin:import/typescript'に合わせてここに書いた。https://github.com/import-js/eslint-plugin-import
     'plugin:import/typescript', // TypeScriptのimportのパスを解決する。pluginsに書くと他のimportのrulesが無効になってしまうのでここに書いた。https://www.npmjs.com/package/eslint-import-resolver-typescript https://github.com/import-js/eslint-plugin-import#typescript
-    'prettier', // eslint-config-prettier prettierと競合するルールをオフにする。TypeScriptに関するルールも含む() https://github.com/prettier/eslint-config-prettier
+    'prettier', // eslint-config-prettier prettierと競合するルールをオフにする。TypeScriptに関するルールも含む() https://github.com/prettier/eslint-config-prettier prettier/@typescript-eslint は不要 https://github.com/prettier/eslint-config-prettier#installation のNoteに書いてある
   ],
 
   parser: '@typescript-eslint/parser', // TypeScriptのパーサー。@typescript-eslint/eslint-pluginを使うときに必要。https://github.com/typescript-eslint/typescript-eslint/tree/b9407c560c8ab625fd546af73f71cce8178b9e05/packages/parser
@@ -32,6 +32,7 @@ module.exports = {
     'import/no-default-export': 'error', // defaultエクスポートを禁止する
     'import/extensions': [
       // https://github.com/import-js/eslint-plugin-import/blob/HEAD/docs/rules/extensions.md
+      // https://stackoverflow.com/questions/62953124/configure-eslint-to-parse-ts-and-tsx-as-typescript-and-js-and-jsx-as-ecmascr
       'error',
       'always', // すべてのimportで拡張子の省略を禁止する
       {
