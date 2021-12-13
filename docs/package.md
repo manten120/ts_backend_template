@@ -6,7 +6,12 @@
 
 - `jest` テストを行う
 
+- `ts-jest` コンパイルせずTSのままテストを行えるようにする
+
 - `supertest` テストの際にHTTPリクエストをシミュレートする
+
+- `ts-node-dev` TSをコンパイルせずに実行する。ホットリロードする。
+
 
 ## ESLint, Prettier関連のnpmパッケージ
 

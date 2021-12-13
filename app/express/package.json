@@ -4,6 +4,7 @@
   "private": true,
   "scripts": {
     "start": "node ./dist/bin/www",
+    "dev": "ts-node-dev --poll --interval 1000 --respawn ./src/bin/www",
     "postinstall": "typesync && yarn install --ignore-scripts",
     "build": "tsc",
     "eslint": "eslint",
@@ -39,14 +40,23 @@
     "jest": "^27.4.4",
     "prettier": "^2.5.1",
     "supertest": "^6.1.6",
+    "ts-jest": "^27.1.1",
+    "ts-node-dev": "^1.1.8",
     "typescript": "^4.5.3",
     "typesync": "^0.8.0"
   },
-
   "jest": {
-    "rootDir": "./dist",
+    "transform": {
+      "^.+\\.ts$": "ts-jest"
+    },
+    "globals": {
+      "ts-jest": {
+        "tsConfig": "tsconfig.json"
+      }
+    },
+    "rootDir": "./src",
     "testMatch": [
-      "**/__tests__/**/*.test.js"
+      "**/__tests__/**/*.test.ts"
     ]
   }
 }
