@@ -6,6 +6,8 @@
 
 - `jest` テストを行う
 
+- `supertest` テストの際にHTTPリクエストをシミュレートする
+
 ## ESLint, Prettier関連のnpmパッケージ
 
 - `eslint` varをconstにしたり、関数定義をアロー関数に統一したりしてくれる
