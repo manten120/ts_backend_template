@@ -10,13 +10,16 @@
     "eslint": "eslint",
     "prettier": "prettier",
     "lint-fix": "yarn eslint --fix ./src/**/*.ts && yarn prettier --write ./src/**/*.ts",
-    "test": "jest"
+    "test": "jest --forceExit --verbose"
   },
   "dependencies": {
     "cookie-parser": "~1.4.4",
     "debug": "~2.6.9",
     "express": "~4.16.1",
-    "morgan": "~1.9.1"
+    "morgan": "~1.9.1",
+    "mysql": "^2.18.1",
+    "reflect-metadata": "^0.1.13",
+    "typeorm": "^0.2.41"
   },
   "devDependencies": {
     "@types/cookie-parser": "~1.4.2",
@@ -25,6 +28,7 @@
     "@types/express": "~4.16.1",
     "@types/jest": "^27.0.3",
     "@types/morgan": "~1.9.3",
+    "@types/mysql": "^2.15.19",
     "@types/node": "^16.11.12",
     "@types/prettier": "^2.4.2",
     "@types/supertest": "^2.0.11",
@@ -51,7 +55,7 @@
     },
     "globals": {
       "ts-jest": {
-        "tsConfig": "tsconfig.json"
+        "tsconfig": "tsconfig.json"
       }
     },
     "rootDir": "./src",

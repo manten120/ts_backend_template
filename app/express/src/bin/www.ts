@@ -6,6 +6,8 @@
 
 import http from "http";
 import Debug from "debug";
+
+import { connectToDB } from "../orm";
 import { app } from "../app";
 
 const debug = Debug("express:server");
@@ -86,9 +88,11 @@ const onListening = () => {
 };
 
 /**
- * Listen on provided port, on all network interfaces.
+ * Connect to database then listen on provided port, on all network interfaces.
  */
 
-server.listen(port);
-server.on("error", onError);
-server.on("listening", onListening);
+connectToDB().then(() => {
+  server.listen(port);
+  server.on("error", onError);
+  server.on("listening", onListening);
+});

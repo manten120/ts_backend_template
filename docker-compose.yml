@@ -12,6 +12,8 @@ services:
     restart: always
     volumes:
       - ./app/express:/usr/src/express
+    env_file:
+      - .env
     depends_on:
       - db
 
