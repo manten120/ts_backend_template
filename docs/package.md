@@ -12,6 +12,13 @@
 
 - `ts-node-dev` TSをコンパイルせずに実行する。ホットリロードする。
 
+- `http-errors` ステータスコードに応じてエラーを作成してくれる
+
+- `typeorm` データベースをTypeScriptで操作する
+
+- `reflect-metadata` typeormを使うときに必要。デコレーター(@)と関係してる?。
+
+- `mysql2` typeormでMySQL8と接続するときに必要。mysqlではダメ
 
 ## ESLint, Prettier関連のnpmパッケージ
 
