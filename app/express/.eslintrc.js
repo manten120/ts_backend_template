@@ -28,6 +28,7 @@ module.exports = {
 
   rules: {
     'import/no-commonjs': 'error', // require, module.exportを禁止してimport, export に統一する。https://github.com/import-js/eslint-plugin-import/blob/HEAD/docs/rules/no-commonjs.md
+    '@typescript-eslint/no-unused-vars': 'off',
     'import/prefer-default-export': 'off', // 名前付きエクスポートを許可する
     'import/no-default-export': 'error', // defaultエクスポートを禁止する
     'import/extensions': [

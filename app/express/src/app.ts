@@ -21,12 +21,12 @@ app.use('/user', userRouter);
 app.use('/', indexRouter);
 
 // catch 404 and forward to error handler
-app.use((req, res, next) => {
+app.use((_req, _res, next) => {
   next(createError(404, '存在しないパスへのリクエストです'));
 });
 
 // error handler
-app.use((err: any, req: Request, res: Response, next: NextFunction) => {
+app.use((err: any, _req: Request, res: Response, _next: NextFunction) => { // _next は省略不可 error handler は4つの引数を受け取る必要がある
   res.status(err.status || 500); // 500 Internal Server Error
 
   try {
