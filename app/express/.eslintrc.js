@@ -58,7 +58,8 @@ module.exports = {
       'error',
       {
         vars: 'all',
-        args: 'none', // 関数の引数は許可する
+        args: 'all', 
+        argsIgnorePattern: "^_" // ただしアンダースコアで始まる名前の変数・定数は許可する https://eslint.org/docs/rules/no-unused-vars#argsignorepattern
       },
     ],
 
