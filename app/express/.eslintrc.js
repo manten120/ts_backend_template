@@ -59,7 +59,7 @@ module.exports = {
       {
         vars: 'all',
         args: 'all', 
-        argsIgnorePattern: "^_" // ただしアンダースコアで始まる名前の変数・定数は許可する https://eslint.org/docs/rules/no-unused-vars#argsignorepattern
+        argsIgnorePattern: "^_" // ただしアンダースコアで始まる名前のパラメータは許可する https://eslint.org/docs/rules/no-unused-vars#argsignorepattern
       },
     ],
 
