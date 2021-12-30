@@ -13,5 +13,15 @@
 
 ## アロー関数のオーバーロード
 
+## 読み取り専用のオブジェクト・配列の型
+
+参考:
+
+[【TypeScript】オブジェクトのプロパティを読み込み専用にする6通りの方法](https://qiita.com/manten120/items/acece27acd9a4296b40d)
+
+[TypeScript: 読み取り専用の配列型を宣言する3つの方法](https://qiita.com/suin/items/27abbd6ba7ee8eca507c)
+
+
+
 
 
