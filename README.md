@@ -1,10 +1,10 @@
-# ts_backend_template
+# ts_express_template
 
 - バックエンド作成用のテンプレート
 - Docker
 - TypeScript
 - Node.js 16
-- Express 
+- Express
 - MySQL 8.0
 - TypeORM
 - Jest
